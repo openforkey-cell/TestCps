@@ -53,7 +53,7 @@ jobs:
     - name: Build APK with Buildozer
       run: |
         export PATH=$PATH:~/.local/bin
-        # Automatyczne akceptowanie licencji SDK, żeby Buildozer pobrał aidl bez błędu
+        # Komenda yes automatycznie zatwierdza licencje SDK, dzięki czemu aidl i narzędzia pobiorą się bezbłędnie
         yes | buildozer android debug
 
     - name: Upload APK
