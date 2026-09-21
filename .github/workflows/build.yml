@@ -53,7 +53,8 @@ jobs:
     - name: Build APK with Buildozer
       run: |
         export PATH=$PATH:~/.local/bin
-        buildozer android debug
+        # Automatyczne akceptowanie licencji SDK, żeby Buildozer pobrał aidl bez błędu
+        yes | buildozer android debug
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
